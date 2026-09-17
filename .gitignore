@@ -1,0 +1,11 @@
+.tools/
+reference-big-data/
+__pycache__/
+artifacts/
+mlflow.db
+mlruns/
+mlartifacts/
+.venv/
+.airflow/
+/instruction.md
+/docs/
