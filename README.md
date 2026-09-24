@@ -1,47 +1,49 @@
-# Parcours MLOps : de l'entraînement au monitoring
+﻿# Parcours Big Data et intelligence artificielle
 
-Apprenez à construire, suivre, automatiser et déployer un modèle de machine learning. Le fil conducteur est la prédiction de la durée des trajets Yellow Taxi : vous partirez d'un notebook pour arriver à une API et à des rapports de monitoring.
+Bienvenue dans ce parcours consacré à la conception et à la mise en production de solutions d'intelligence artificielle. Vous apprendrez à exploiter des modèles génératifs, à construire des agents capables d'utiliser des outils, puis à organiser, déployer et suivre vos services IA.
+
+Les cours et travaux pratiques vous accompagnent progressivement, des bases du machine learning à un projet d'application complet. La visualisation des données vous aidera à explorer les résultats et à les rendre compréhensibles pour les utilisateurs.
+
+## Programme
+
+Les durées ci-dessous sont exprimées en heures. Les références et durées non fournies sont indiquées comme restant à préciser.
+
+| Module | Référence | Durée | Description |
+| --- | --- | ---: | --- |
+| IA générative | À préciser | 14 h | Comprendre les modèles génératifs, formuler des instructions et enrichir les réponses avec des données documentaires grâce au RAG. |
+| Agents IA | RNCP40573-BC04B-FM03 | 14 h | Concevoir des agents qui utilisent des outils et enchaînent des actions pour assister un utilisateur ou automatiser des tâches. |
+| Pipelines MLOps | RNCP40573-BC04B-FM04 | 7 h | Structurer les étapes de préparation, d'entraînement et d'évaluation, suivre les expériences et orchestrer des workflows reproductibles. |
+| Data Visualisation | RNCP40573-BC04B-FM05 | 14 h | Explorer les données, choisir des représentations adaptées et présenter les résultats pour faciliter leur interprétation. |
+| Déploiement de services IA | RNCP40573-BC04B-FM06 | 14 h | Exposer un modèle via une API, conteneuriser le service et surveiller son fonctionnement ainsi que la qualité des prédictions. |
+| Projet d’implémentation de modèles Big Data et IA | RNCP40573-BC04B-FM07 | À préciser | Mobiliser les acquis du parcours pour concevoir, réaliser et présenter une solution répondant à un besoin métier. |
+
+## Se repérer dans le dépôt
+
+| Répertoire | Contenu |
+| --- | --- |
+| [01 — IA traditionnelle](01-traditional-ia/README.md) | Bases de l'intelligence artificielle traditionnelle et du machine learning. Contenu à venir. |
+| [02 — IA générative](02-generative-ia/README.md) | Modèles génératifs et applications. Contenu à venir. |
+| [03 — Agents IA](03-agent-ia/README.md) | Agents et automatisation à l'aide d'outils. Contenu à venir. |
+| [04 — MLOps](04-mlops/README.md) | Travaux pratiques sur l'entraînement, MLflow, Airflow, le déploiement avec FastAPI et Docker, et le monitoring avec Evidently. |
+| [Projet fil rouge](projet/README.md) | Propositions de sujets pour le projet d'implémentation. |
+
+Les supports MLOps et de déploiement sont regroupés dans `04-mlops`. Le module Data Visualisation ne dispose pas encore de répertoire dédié.
+
+## Apprendre par la pratique
+
+Le parcours MLOps s'appuie sur la prédiction de la durée des trajets Yellow Taxi. Vous partez d'un notebook pour comparer des modèles, suivre vos expériences, automatiser l'entraînement et construire une API de prédiction accompagnée de rapports de monitoring.
+
+Pour démarrer ces travaux pratiques, consultez [l'introduction au MLOps et la préparation de l'environnement](04-mlops/01-intro/README.md).
+
+## Projet fil rouge
+
+Deux pistes sont proposées pour mettre en pratique les compétences du parcours :
+
+- **Un assistant IA d'entreprise** : ingérer des données structurées et non structurées, répondre aux questions avec un système RAG, puis automatiser certaines tâches grâce à des agents IA et déployer la solution.
+- **Une plateforme de recrutement intelligente** : analyser des CV, effectuer du matching avec des offres d'emploi, générer des synthèses et assister les recruteurs à l'aide d'agents IA.
+
+Retrouvez les propositions dans le [répertoire du projet](projet/README.md).
 
 ## Prérequis
 
-Vous connaissez les bases de Python, de Git, de HTTP et du machine learning. La première étape vous accompagne dans la préparation de votre environnement de travail.
-
-## Les quatre étapes
-
-Suivez les étapes dans l'ordre : chacune réutilise les données, le code ou les modèles des précédentes.
-
-| Étape | Ce que vous allez apprendre | Résultat attendu |
-| --- | --- | --- |
-| **[1. Introduction et premiers modèles](01-intro/README.md)** | Comprendre le cycle de vie ML, préparer l'environnement, explorer les données avec Jupyter et comparer plusieurs modèles. | Un notebook de préparation, d'entraînement et d'évaluation. |
-| **[2. Suivi des expériences avec MLflow](02-track-experiences/README.md)** | Enregistrer les paramètres, les métriques et les modèles, comparer les exécutions et gérer les versions dans le registre. | Des expériences traçables et une version du modèle associée à l'alias `champion`. |
-| **[3. Orchestration de l'entraînement](03-orchestration-deployment/README.md)** | Transformer le notebook en projet Python, rendre l'entraînement paramétrable et orchestrer son exécution avec Airflow. | Un workflow reproductible avec validation du modèle et gestion des échecs. |
-| **[4. Déploiement et monitoring](04-deployment/README.md)** | Exposer le modèle avec FastAPI, déployer le service dans Docker et analyser les données et les prédictions avec Evidently. | Une API de prédiction et des rapports de dérive et de qualité du modèle. |
-
-## Accès aux travaux pratiques
-
-### Étape 1. Introduction et premiers modèles
-
-- [Comprendre le MLOps](01-intro/01-introduction.md)
-- [Préparer GitHub Codespaces](01-intro/02-lab-codespace.md)
-- [Préparer l'environnement local et découvrir Docker](01-intro/03-lab-docker-local.md)
-- [Lancer Jupyter et lire les données Parquet](01-intro/04-run-jupyter-notebook.md)
-- [Prédire la durée des trajets](01-intro/05-duration-prediction.md)
-
-### Étape 2. Suivi des expériences avec MLflow
-
-- [Comprendre le suivi des expériences](02-track-experiences/01-experiment-tracking-intro.md)
-- [Enregistrer et comparer les entraînements](02-track-experiences/02-tracking.md)
-- [Gérer les versions et les alias des modèles](02-track-experiences/03-modele-registry-management.md)
-
-### Étape 3. Orchestration de l'entraînement
-
-- [Passer du notebook au projet Python et au workflow](03-orchestration-deployment/01-orchestration-jupyter-to-script.md)
-- [Orchestrer le projet avec Airflow](03-orchestration-deployment/02-airflow.md)
-
-### Étape 4. Déploiement et monitoring
-
-- [Exposer le modèle avec FastAPI](04-deployment/01-web-service.md)
-- [Déployer le service dans Docker](04-deployment/02-deploy-docker-image.md)
-- [Prendre en main Evidently et surveiller le modèle](04-deployment/03-monitoring.md)
-
-Pour commencer, ouvrez [l'étape 1 : introduction au MLOps](01-intro/README.md).
+Des bases en Python, Git, HTTP et machine learning vous permettront d'aborder les travaux pratiques. Les premiers supports MLOps vous guident dans la préparation de votre environnement, en local ou avec GitHub Codespaces.
