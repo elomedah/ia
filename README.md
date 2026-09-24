@@ -21,10 +21,10 @@ Les durées ci-dessous sont exprimées en heures. Les références et durées no
 
 | Répertoire | Contenu |
 | --- | --- |
-| [01 — IA traditionnelle](01-traditional-ia/README.md) | Bases de l'intelligence artificielle traditionnelle et du machine learning. Contenu à venir. |
-| [02 — IA générative](02-generative-ia/README.md) | Modèles génératifs et applications. Contenu à venir. |
-| [03 — Agents IA](03-agent-ia/README.md) | Agents et automatisation à l'aide d'outils. Contenu à venir. |
-| [04 — MLOps](04-mlops/README.md) | Travaux pratiques sur l'entraînement, MLflow, Airflow, le déploiement avec FastAPI et Docker, et le monitoring avec Evidently. |
+| [01 - IA traditionnelle](01-traditional-ia/README.md) | Bases de l'intelligence artificielle traditionnelle et du machine learning. Contenu à venir. |
+| [02 - IA générative](02-generative-ia/README.md) | Modèles génératifs et applications. Contenu à venir. |
+| [03 - Agents IA](03-agent-ia/README.md) | Agents et automatisation à l'aide d'outils. Contenu à venir. |
+| [04 - MLOps](04-mlops/README.md) | Travaux pratiques sur l'entraînement, MLflow, Airflow, le déploiement avec FastAPI et Docker, et le monitoring avec Evidently. |
 | [Projet fil rouge](projet/README.md) | Propositions de sujets pour le projet d'implémentation. |
 
 Les supports MLOps et de déploiement sont regroupés dans `04-mlops`. Le module Data Visualisation ne dispose pas encore de répertoire dédié.
