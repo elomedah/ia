@@ -4,13 +4,20 @@ Vous allez analyser les ventes d'une petite boutique : quel produit génère le 
 
 Les données sont fictives. Aucune connaissance préalable de pandas n'est nécessaire.
 
+## Ordre des exercices
+
+| Numéro | Exercice | Fichiers |
+| --- | --- | --- |
+| 01 | Rappel Python et analyse des ventes | Ce support et le [notebook 01](01-rappel-python.ipynb), puis le [corrigé des ventes](corriges/01-ventes.md) |
+| 02 | Analyse des taxis NYC | [Énoncé 02](02-exercice-taxis-nyc.md) et [notebook 02](02-exercice-taxis-nyc.ipynb) |
+
 ## Préparer votre espace
 
 ### Option 1 : Google Colab, dans votre navigateur
 
-Vous pouvez réaliser **tout le TP**, y compris l'[exercice sur les taxis NYC](exercice-taxis-nyc.md), dans [Google Colab](https://colab.research.google.com/), sans installer Python sur votre ordinateur.
+Vous pouvez réaliser **tout le TP**, y compris l'[exercice sur les taxis NYC](02-exercice-taxis-nyc.md), dans [Google Colab](https://colab.research.google.com/), sans installer Python sur votre ordinateur.
 
-1. Connectez-vous avec votre compte Google. Importez `rappel-python.ipynb` depuis le menu **Fichier > Importer un notebook** (les libellés peuvent varier selon la langue).
+1. Connectez-vous avec votre compte Google. Importez `01-rappel-python.ipynb` depuis le menu **Fichier > Importer un notebook** (les libellés peuvent varier selon la langue).
 2. Enregistrez une copie du notebook dans votre Drive. Un environnement CPU suffit ; aucun GPU n'est nécessaire.
 3. Dans une cellule ajoutée au début, exécutez `%pip install pandas matplotlib seaborn pyarrow`.
 4. Dans le panneau **Fichiers** à gauche, créez un dossier `donnees`. Importez dans ce dossier les deux fichiers `ventes_jour1.csv` et `ventes_jour2.csv` fournis dans ce TP. Les chemins du support fonctionneront ainsi sans modification.
@@ -29,7 +36,7 @@ python -m pip install jupyterlab pandas matplotlib seaborn pyarrow
 python -m jupyterlab
 ```
 
-Ouvrez le dossier `00-rappel-python`, puis le notebook `rappel-python.ipynb`. Choisissez le noyau de votre environnement Python. Gardez le sous-dossier `donnees` à côté du notebook. Le support ci-dessous reprend les mêmes étapes : vous pouvez aussi copier chaque bloc Python dans une cellule d'un nouveau notebook placé dans ce dossier.
+Ouvrez le dossier `00-rappel-python`, puis le notebook `01-rappel-python.ipynb`. Choisissez le noyau de votre environnement Python. Gardez le sous-dossier `donnees` à côté du notebook. Le support ci-dessous reprend les mêmes étapes : vous pouvez aussi copier chaque bloc Python dans une cellule d'un nouveau notebook placé dans ce dossier.
 
 ### Exécuter les cellules
 
@@ -224,11 +231,11 @@ plt.show()
 
 À partir de `ventes_valides`, calculez le nombre total d'articles vendus **par produit**, triez-le du plus grand au plus petit, puis adaptez le graphique Matplotlib pour afficher ces quantités. Changez aussi le titre et l'unité de l'axe vertical.
 
-Conservez votre notebook, le CSV de synthèse et l'image. Expliquez en une phrase pourquoi les résultats sont incomplets. Consultez ensuite le [corrigé](corrige.md).
+Conservez votre notebook, le CSV de synthèse et l'image. Expliquez en une phrase pourquoi les résultats sont incomplets. Consultez ensuite le [corrigé](corriges/01-ventes.md).
 
 ## En cas de difficulté
 
-Pour prolonger le TP, réalisez l'[exercice d'analyse des trajets NYC](exercice-taxis-nyc.md) : chargement d'un CSV réel, manipulation, nettoyage justifié, conversion des dates et graphiques. Cet exercice ne comporte pas de corrigé. Son énoncé est aussi disponible dans `exercice-taxis-nyc.ipynb`, à ouvrir dans JupyterLab ou à importer dans Colab.
+Pour prolonger le TP, réalisez l'[exercice d'analyse des trajets NYC](02-exercice-taxis-nyc.md) : chargement d'un CSV réel, manipulation, nettoyage justifié, conversion des dates et graphiques. Cet exercice ne comporte pas de corrigé. Son énoncé est aussi disponible dans `02-exercice-taxis-nyc.ipynb`, à ouvrir dans JupyterLab ou à importer dans Colab.
 
 | Message | Vérification |
 | --- | --- |

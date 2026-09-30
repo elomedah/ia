@@ -1,6 +1,6 @@
 # Analyser les trajets des taxis de New York
 
-Vous disposez de données réelles de trajets de taxis verts à New York. Votre objectif : décrire les trajets observés, examiner leur qualité et représenter leurs durées, leurs distances et leur répartition horaire. Réalisez le travail dans `exercice-taxis-nyc.ipynb`, avec Google Colab ou JupyterLab. Ajoutez vos cellules de code et vos commentaires sous chaque question. Aucun corrigé n'est fourni.
+Vous disposez de données réelles de trajets de taxis verts à New York. Votre objectif : décrire les trajets observés, examiner leur qualité et représenter leurs durées, leurs distances et leur répartition horaire. Réalisez le travail dans `02-exercice-taxis-nyc.ipynb`, avec Google Colab ou JupyterLab. Ajoutez vos cellules de code et vos commentaires sous chaque question. Aucun corrigé n'est fourni.
 
 ## Préparer le fichier CSV
 
