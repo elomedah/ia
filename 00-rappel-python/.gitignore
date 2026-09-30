@@ -1,0 +1,22 @@
+# Corriges reserves aux enseignants
+enseignant/
+enseignants/
+corrige-prof*
+corrige-enseignant*
+
+# Documents internes et fichiers de travail
+docs/
+travail/
+brouillons/
+.ipynb_checkpoints/
+*.tmp
+*.bak
+~$*
+
+# Donnees telechargees et resultats generes
+resultats-taxis-prof/
+donnees/taxis_verts_2025_01.csv
+chiffre_affaires_par_produit.csv
+chiffre_affaires.png
+taxis_nettoyes.csv
+*.parquet

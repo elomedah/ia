@@ -21,6 +21,7 @@ Les durées ci-dessous sont exprimées en heures. Les références et durées no
 
 | Répertoire | Contenu |
 | --- | --- |
+| [00 - Rappel Python et analyse de fichiers](00-rappel-python/README.md) | Variables, fonctions, objets, pandas, Matplotlib et seaborn sur deux fichiers CSV, avec notebook et corrigé. |
 | [01 - IA traditionnelle](01-traditional-ia/README.md) | Bases de l'intelligence artificielle traditionnelle et du machine learning. Contenu à venir. |
 | [02 - IA générative](02-generative-ia/README.md) | Modèles génératifs et applications. Contenu à venir. |
 | [03 - Agents IA](03-agent-ia/README.md) | Agents et automatisation à l'aide d'outils. Contenu à venir. |

@@ -1,0 +1,15 @@
+# Corriges reserves aux enseignants
+enseignant/
+enseignants/
+corrige-prof*
+corrige-enseignant*
+
+# Documents internes et fichiers de travail
+/progression-detaillee.txt
+docs/
+travail/
+brouillons/
+.ipynb_checkpoints/
+*.tmp
+*.bak
+~$*
