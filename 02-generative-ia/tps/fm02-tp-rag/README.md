@@ -7,7 +7,7 @@ Kit de démarrage des deux TP du module **IA Générative** (M2 Lead Developer F
 
 | Fichier | À compléter | TP |
 |---|---|---|
-| `src/rag/loaders.py` | `remove_repeated_lines`, nettoyage HTML dans `load_html` | 1 |
+| `src/rag/loaders.py` | observer les prétraitements appliqués `remove_repeated_lines`, `load_html` | 1 |
 | `src/rag/chunking.py` | `fixed_size_chunks` | 1 |
 | `src/rag/embeddings.py` | `embed_documents`, `embed_query` | 1 |
 | `src/rag/vectorstore.py` | `add_chunks`, `search` | 1 |
