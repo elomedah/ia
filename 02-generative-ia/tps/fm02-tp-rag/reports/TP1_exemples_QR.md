@@ -1,0 +1,13 @@
+# TP 1 · Exemples de questions-réponses
+
+_Ce fichier est généré par l'étape 5 du notebook `TP1_chatbot_RAG.ipynb`. Complétez ensuite le verdict de chaque réponse._
+
+Configuration : `tp1` · chunking … · top-k … · modèle …
+
+## Q1. …
+
+Réponse : …
+
+Sources : …
+
+Verdict : correcte / partielle / fausse, et pourquoi.

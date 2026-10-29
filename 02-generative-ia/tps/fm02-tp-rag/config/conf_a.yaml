@@ -1,0 +1,11 @@
+# TP 2 : configuration A (consigne de la slide TP 2)
+name: conf_a
+chunking: fixed
+chunk_size: 500
+chunk_overlap: 50
+embedding_model: BAAI/bge-m3
+top_k: 3
+rerank: false
+llm_provider: auto
+ollama_model: qwen3:8b
+temperature: 0.0

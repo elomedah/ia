@@ -1,0 +1,13 @@
+# TP 2 : configuration B (consigne de la slide TP 2)
+name: conf_b
+chunking: fixed
+chunk_size: 200
+chunk_overlap: 30
+embedding_model: BAAI/bge-m3
+top_k: 5
+rerank: true
+rerank_model: BAAI/bge-reranker-v2-m3   # plus léger sur CPU : cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+fetch_k: 20
+llm_provider: auto
+ollama_model: qwen3:8b
+temperature: 0.0
