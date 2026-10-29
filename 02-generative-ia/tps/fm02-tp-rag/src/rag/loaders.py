@@ -40,7 +40,6 @@ def load_text(path: Path) -> list[Document]:
     text = path.read_text(encoding="utf-8")
     return [Document(clean_text(text), {"source": path.name, "type": path.suffix.lstrip(".")})]
 
-
 def remove_repeated_lines(pages: list[str], min_ratio: float = 0.6) -> list[str]:
     """Supprime les lignes (en-têtes, pieds de page) répétées sur la plupart des pages.
 
@@ -49,8 +48,15 @@ def remove_repeated_lines(pages: list[str], min_ratio: float = 0.6) -> list[str]
     """
     if len(pages) < 2:
         return pages
-    # TODO : repérer les lignes présentes sur au moins min_ratio des pages (en ignorant les chiffres) puis les retirer de chaque page
-    raise NotImplementedError("TODO : repérer les lignes présentes sur au moins min_ratio des pages (en i...")
+    def key(line: str) -> str:
+        return re.sub(r"\d+", "#", line.strip().lower())
+
+    counts = Counter()
+    for page in pages:
+        counts.update({key(l) for l in page.splitlines() if l.strip()})
+    threshold = max(2, int(min_ratio * len(pages) + 0.999))
+    noisy = {k for k, n in counts.items() if n >= threshold}
+    return ["\n".join(l for l in page.splitlines() if key(l) not in noisy) for page in pages]
 
 
 def load_pdf(path: Path) -> list[Document]:
@@ -69,8 +75,21 @@ def load_html(path: Path) -> list[Document]:
     from bs4 import BeautifulSoup
 
     soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
-    # TODO : supprimer nav/footer/script/style, garder <main> (ou <body>), convertir h1/h2/h3 en titres Markdown et li en puces
-    raise NotImplementedError("TODO : supprimer nav/footer/script/style, garder <main> (ou <body>), conve...")
+    
+    for tag in soup(["script", "style", "nav", "footer", "header", "noscript"]):
+        tag.decompose()
+    root = soup.find("main") or soup.body or soup
+    for level in (1, 2, 3):
+        for h in root.find_all(f"h{level}"):
+            h.replace_with(f"\n\n{'#' * level} {h.get_text(' ', strip=True)}\n\n")
+    for li in root.find_all("li"):
+        li.replace_with(f"\n- {li.get_text(' ', strip=True)}")
+    for br in root.find_all("br"):
+        br.replace_with("\n")
+    for block in root.find_all(["p", "div", "table", "tr", "ul", "ol"]):
+        block.insert_after("\n\n")
+    # get_text() SANS séparateur : les balises en ligne (<strong>, <a>) ne coupent pas les phrases
+    text = root.get_text()
     title = soup.title.get_text(strip=True) if soup.title else path.stem
     return [Document(clean_text(text), {"source": path.name, "type": "html", "title": title})]
 
