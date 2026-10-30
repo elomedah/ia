@@ -1,0 +1,16 @@
+# Pour aller plus loin : configuration C à comparer à A et B.
+# Chunking par sections + recherche hybride (vecteurs + BM25) + reranking.
+# Hypothèse à tester : meilleur sur les identifiants exacts (RH-07, SEC-2, P2).
+name: conf_c
+chunking: markdown
+chunk_size: 400
+chunk_overlap: 40
+embedding_model: BAAI/bge-m3
+top_k: 4
+rerank: true
+rerank_model: BAAI/bge-reranker-v2-m3
+fetch_k: 20
+hybrid: true
+llm_provider: auto
+ollama_model: qwen3:8b
+temperature: 0.0

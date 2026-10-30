@@ -1,0 +1,14 @@
+# TP 1 : configuration du chatbot RAG.
+# TODO : choisir la stratégie, la taille et le chevauchement des chunks, puis
+# justifier ce choix dans le README (section « Justification du chunking »).
+name: tp1
+chunking: fixed           # "fixed" ou "markdown"
+chunk_size: 500           # en caractères
+chunk_overlap: 50
+embedding_model: BAAI/bge-m3
+top_k: 3
+rerank: false
+llm_provider: auto        # Ollama si disponible, sinon Gemini
+ollama_model: qwen3:8b
+gemini_model: gemini-3.1-flash-lite
+temperature: 0.0
