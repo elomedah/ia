@@ -2,7 +2,7 @@
 
 GitHub Codespaces fournit un environnement Linux accessible depuis un navigateur. Votre code et vos fichiers sont conservés dans un dépôt GitHub.
 
-## 1. Créer un compte GitHub
+## 1. Créer un compte GitHub (Optionnel si vous avez déja un compte github : connectez vous simplement)
 
 1. Ouvrez [github.com/signup](https://github.com/signup).
 2. Créez un compte personnel.
