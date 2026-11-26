@@ -17,6 +17,11 @@ conda activate mlops
 conda install -c conda-forge pandas pyarrow scikit-learn matplotlib seaborn jupyterlab xgboost -y
 ```
 
+Si vous avez des erreurs de librairies non trouvées, vous pouvez installer directement dans les cellules de jupyter lab.
+
+```
+!pip install pandas pyarrow scikit-learn matplotlib seaborn jupyterlab xgboost
+```
 Relancez JupyterLab si les bibliothèques ont été installées pendant son exécution.
 
 ## 2. Importer les bibliothèques
